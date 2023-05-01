@@ -2,6 +2,44 @@
 *::before *::after {
     box-sizing: border-box;
 }
+.container {
+    background-image: url("/next-page/imgs/фон.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.a1 {
+    border: solid 3px #aca8a8;
+    background: rgb(174, 180, 27);
+    background: linear-gradient(90deg, rgba(174, 180, 27, 1) 0%, rgba(43, 213, 80, 1) 46%, rgba(0, 154, 185, 1) 100%);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin: 150px auto;
+    justify-content: center;
+    font-size: larger;
+}
+.main-footer {
+    background: rgb(174, 180, 27);
+    background: linear-gradient(90deg, rgba(174, 180, 27, 1) 0%, rgba(43, 213, 80, 1) 46%, rgba(0, 154, 185, 1) 100%);
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+}
+.first-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    font-size: larger
+}
+.main-header {
+    background: rgb(174, 180, 27);
+    background: linear-gradient(90deg, rgba(174, 180, 27, 1) 0%, rgba(43, 213, 80, 1) 46%, rgba(0, 154, 185, 1) 100%);
+    width: 100%;
+    height: 100px;
+}
 .part-first {
     display: flex;
     justify-content: space-around;
@@ -89,4 +127,123 @@ z-index: 1;
     height: 300px;
     background-color: rgb(206, 67, 171);
     z-index: 3;
+}
+.dz9-1 {
+    width: 300px;
+    height: 300px;
+    background-color: darksalmon;
+    margin: auto;
+}
+.dz9-1:hover {
+    animation-name: part-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes part-1 {
+    0% {
+        background-color: darksalmon;
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: chartreuse;
+        transform: rotate(90deg);
+    }
+    500% {
+        background-color: aqua;
+        transform: rotate(180deg);
+    }
+    750% {
+            background-color: rgb(146, 62, 34);
+            transform: rotate(270deg);
+        }
+    100% {
+        background-color: darksalmon;
+        transform: rotate(360deg);
+    }
+}
+.dz9-2 {
+    width: 700px;
+    height: 320px;
+    border: #000 solid 3px;
+    margin: auto;
+}
+@keyframes part-2 {
+ 0% {
+    margin-top: 10px;
+    margin-left: 10px;
+ }
+25% {
+    margin-top: 80px;
+    margin-left: 175px;
+}
+50% {
+    margin-top: 160px;
+    margin-left: 350px;
+}
+50% {
+    margin-top: 240px;
+    margin-left: 525px;
+}
+50% {
+    margin-top: 280px;
+    margin-left: 630px;
+}
+}
+.dz9-2-p {
+    font-size: x-large;
+    animation-name: part-2;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+.dz9-3 {
+    display: flex;
+    justify-content: end;
+}
+.bullet {
+    position: relative;
+    top: 35px;
+    width: 70px;
+    height: 40px;
+}
+.gun {
+    width: 200px;
+    height: 150px;
+}
+@keyframes gun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }  
+}
+@keyframes bullet {
+    0% {
+        display: block;
+    }
+    25% {
+        margin-right: 100px;
+    }
+    50% {
+      margin-right: 200px;  
+    }
+    75% {
+            margin-right: 300px;
+    }
+    100% {
+            margin-right: 400px;
+            display: none;
+    }
+}
+.gun:active {
+    animation-name: gun;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+}
+.bullet:active {
+    animation-name: bullet;
+    animation-duration: 3s;
+    animation-timing-function: linear;
 }
