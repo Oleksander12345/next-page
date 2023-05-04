@@ -36,7 +36,6 @@
     bottom: 0;
 }
 .first-footer {
-    position: absolute;
     bottom: 40px;
     left: 50px;
     font-size: larger
@@ -387,6 +386,27 @@ z-index: 1;
 .dz10-3-3:hover {
     animation-name: translate-3;
     animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.sun {
+    margin: auto;
+
+}
+.sun1 {
+    display: none;
+}
+@keyframes sun {
+    0% {
+opacity: 0;
+    }
+    100% {
+        background-image: url('/next-page/imgs/sun2.jpg');
+    }
+}
+.sun:active {
+    animation-name: sun;
+    animation-duration: 4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
