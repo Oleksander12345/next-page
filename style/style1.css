@@ -259,23 +259,34 @@ z-index: 1;
     height: 300px;
     background-color: rgb(200, 238, 112);
     margin: auto;
+    margin-top: 40px;
 }
 @keyframes skew {
     0% {
         transform: skewX(0);
         background-color: rgb(200, 238, 112);
     }
+    25% {
+        transform: skewY(45deg);
+        background-color: rgb(214, 88, 88);
+    }
     50% {
-        transform: skewX(30deg);
+        transform: skewY(0);
+        transform: skewX(65deg);
         background-color: rgb(76, 192, 192);
     }
+75% {
+    transform: skewX(-30deg);
+    background-color: rgb(76, 192, 192);
+}
     100% {
-        transform: skewX(0);
+        transform: skew(0);
         background-color: rgb(95, 82, 67);
     }
 }
 .dz10-1:hover {
     animation-name: skew;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -283,19 +294,99 @@ z-index: 1;
     width: 300px;
     height: 300px;
     background-color: rgb(211, 152, 226);
-    margin: 100px auto;
+    margin: 30px auto;
     border-radius: 50%;
 }
 @keyframes scale {
     0% {
         transform: scale(1);
+        background-color:rgb(211, 152, 226);
+    }
+    25% {
+        transform: scale(0.8, 0.5);
+        background-color: rgb(132, 226, 127);
+    }
+    50% {
+        transform: scale(0.3, 1.5);
+        background-color: blanchedalmond;
+    }
+    75% {
+        transform: scale(1.7, 0.8);
+        background-color: rgb(147, 207, 235);
     }
     100% {
-        transform: scale(0.3 1.5);
+        transform: scale(1);
+        background-color: rgb(211, 152, 226);
     }
 }
 .dz10-2:hover {
     animation-name: scale;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.dz10-3 {
+    display: flex;
+    justify-content: space-around;
+}
+.dz10-3-1 {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(61, 91, 129);
+}
+@keyframes translate-1 {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(23px, -70px);
+    }
+}
+.dz10-3-2 {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(139, 50, 240);
+}
+
+@keyframes translate-2 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(50px, 39px);
+    }
+}
+.dz10-3-3 {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(9, 153, 21);
+}
+
+@keyframes translate-3 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-110px, 20px);
+    }
+}
+.dz10-3-1:hover {
+    animation-name: translate-1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.dz10-3-2:hover {
+    animation-name: translate-2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.dz10-3-3:hover {
+    animation-name: translate-3;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
