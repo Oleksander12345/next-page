@@ -2,12 +2,19 @@
 *::before *::after {
     box-sizing: border-box;
 }
-.container {
-    background-image: url("/next-page/imgs/фон.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 .a1 {
+    border: solid 3px #aca8a8;
+    background: rgb(174, 180, 27);
+    background: linear-gradient(90deg, rgba(174, 180, 27, 1) 0%, rgba(43, 213, 80, 1) 46%, rgba(0, 154, 185, 1) 100%);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin: 150px auto;
+    justify-content: center;
+    font-size: larger;
+}
+.a2 {
     border: solid 3px #aca8a8;
     background: rgb(174, 180, 27);
     background: linear-gradient(90deg, rgba(174, 180, 27, 1) 0%, rgba(43, 213, 80, 1) 46%, rgba(0, 154, 185, 1) 100%);
@@ -246,4 +253,49 @@ z-index: 1;
     animation-name: bullet;
     animation-duration: 3s;
     animation-timing-function: linear;
+}
+.dz10-1 {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(200, 238, 112);
+    margin: auto;
+}
+@keyframes skew {
+    0% {
+        transform: skewX(0);
+        background-color: rgb(200, 238, 112);
+    }
+    50% {
+        transform: skewX(30deg);
+        background-color: rgb(76, 192, 192);
+    }
+    100% {
+        transform: skewX(0);
+        background-color: rgb(95, 82, 67);
+    }
+}
+.dz10-1:hover {
+    animation-name: skew;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.dz10-2 {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(211, 152, 226);
+    margin: 100px auto;
+    border-radius: 50%;
+}
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.3 1.5);
+    }
+}
+.dz10-2:hover {
+    animation-name: scale;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
